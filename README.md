@@ -7,6 +7,7 @@
 - 第一种：一个带尖角的view
 - 第二种：一个进度条，可以用来显示音量
 - 第三种：一个用CASHapeLayer画出来的进度条，其中加入了基本动画。
+- 第四种：一个带有动画的进度条
 
 > 代码见demo：[DEMO](https://github.com/wangyingbo/testCAShapeLayer)
 
