@@ -78,9 +78,12 @@
     }
     else
     {
+        //LRLog(@"____anim:%@",anim);
+        
         if (self.stopBlock)
         {
             self.stopBlock(flag);
+            
             //两秒后移除所有动画
             [self performSelector:@selector(removeAnimation) withObject:self afterDelay:2.0];
         }
@@ -180,6 +183,7 @@
     animGou.fillMode = kCAFillModeForwards;
     animGou.delegate = self;
     [shapeLayerGou addAnimation:animGou forKey:@"gou"];
+    [animGou setValue:@"gouAnimation" forKey:@"gouAnimationKey"];
 }
 
 

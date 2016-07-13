@@ -59,6 +59,7 @@
         self.view.userInteractionEnabled = NO;
         [self.progressView startCircleAnimation:^(BOOL isFinish) {
             self.view.userInteractionEnabled = YES;
+            LRLog(@".......");
         }];
     })
     
