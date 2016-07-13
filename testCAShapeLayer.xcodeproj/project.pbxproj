@@ -16,6 +16,7 @@
 		6827A0CB1D33789600D8BFCC /* testCAShapeLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827A0CA1D33789600D8BFCC /* testCAShapeLayerTests.m */; };
 		6827A0D61D33789600D8BFCC /* testCAShapeLayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827A0D51D33789600D8BFCC /* testCAShapeLayerUITests.m */; };
 		6827A0EB1D33792A00D8BFCC /* CAShapeLayer+mask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827A0EA1D33792A00D8BFCC /* CAShapeLayer+mask.m */; };
+		68299DF81D361D6F003F7AA3 /* YBProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68299DF71D361D6F003F7AA3 /* YBProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,9 @@
 		6827A0D71D33789600D8BFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6827A0E91D33792A00D8BFCC /* CAShapeLayer+mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+mask.h"; sourceTree = "<group>"; };
 		6827A0EA1D33792A00D8BFCC /* CAShapeLayer+mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+mask.m"; sourceTree = "<group>"; };
+		68299DF51D36154D003F7AA3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		68299DF61D361D6F003F7AA3 /* YBProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBProgressView.h; sourceTree = "<group>"; };
+		68299DF71D361D6F003F7AA3 /* YBProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +112,12 @@
 				6827A0B41D33789600D8BFCC /* AppDelegate.m */,
 				6827A0B61D33789600D8BFCC /* ViewController.h */,
 				6827A0B71D33789600D8BFCC /* ViewController.m */,
+				68299DF61D361D6F003F7AA3 /* YBProgressView.h */,
+				68299DF71D361D6F003F7AA3 /* YBProgressView.m */,
 				6827A0E91D33792A00D8BFCC /* CAShapeLayer+mask.h */,
 				6827A0EA1D33792A00D8BFCC /* CAShapeLayer+mask.m */,
 				6827A0B91D33789600D8BFCC /* Main.storyboard */,
-				6827A0BC1D33789600D8BFCC /* Assets.xcassets */,
-				6827A0BE1D33789600D8BFCC /* LaunchScreen.storyboard */,
-				6827A0C11D33789600D8BFCC /* Info.plist */,
+				68299DF51D36154D003F7AA3 /* PrefixHeader.pch */,
 				6827A0B01D33789600D8BFCC /* Supporting Files */,
 			);
 			path = testCAShapeLayer;
@@ -122,6 +126,9 @@
 		6827A0B01D33789600D8BFCC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6827A0BC1D33789600D8BFCC /* Assets.xcassets */,
+				6827A0BE1D33789600D8BFCC /* LaunchScreen.storyboard */,
+				6827A0C11D33789600D8BFCC /* Info.plist */,
 				6827A0B11D33789600D8BFCC /* main.m */,
 			);
 			name = "Supporting Files";
@@ -277,6 +284,7 @@
 			files = (
 				6827A0B81D33789600D8BFCC /* ViewController.m in Sources */,
 				6827A0B51D33789600D8BFCC /* AppDelegate.m in Sources */,
+				68299DF81D361D6F003F7AA3 /* YBProgressView.m in Sources */,
 				6827A0B21D33789600D8BFCC /* main.m in Sources */,
 				6827A0EB1D33792A00D8BFCC /* CAShapeLayer+mask.m in Sources */,
 			);
@@ -419,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = testCAShapeLayer/PrefixHeader.pch;
 				INFOPLIST_FILE = testCAShapeLayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -431,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = testCAShapeLayer/PrefixHeader.pch;
 				INFOPLIST_FILE = testCAShapeLayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -504,6 +514,7 @@
 				6827A0DC1D33789600D8BFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6827A0DD1D33789600D8BFCC /* Build configuration list for PBXNativeTarget "testCAShapeLayerTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +523,7 @@
 				6827A0DF1D33789600D8BFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6827A0E01D33789600D8BFCC /* Build configuration list for PBXNativeTarget "testCAShapeLayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +532,7 @@
 				6827A0E21D33789600D8BFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "CAShapeLayer+mask.h"
+#import "YBProgressView.h"
+
 
 #define TOTAL_NUM 10
 
@@ -18,6 +20,9 @@
 @property (nonatomic, weak) UIView *dynamicView;
 @property (nonatomic, strong) CAShapeLayer *indicateLayer;
 @property (nonatomic, strong) UIView *demoView;
+
+/** 有动画效果的进度条*/
+@property (nonatomic, strong) YBProgressView *progressView;
 
 @end
 
@@ -34,6 +39,36 @@
     
     //测试画圆形的进度条
     [self addCycleProgress];
+    
+    //测试画有动画的进度条
+    [self addAnimationProgress];
+}
+
+
+/**
+ *  测试画有动画的进度条
+ */
+- (void)addAnimationProgress
+{
+    
+    self.progressView = [[YBProgressView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2, 50, 80, 80)];
+    [self.view addSubview:self.progressView];
+    
+    kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{
+        LRLog(@"异步加载");
+        self.view.userInteractionEnabled = NO;
+        [self.progressView startCircleAnimation:^(BOOL isFinish) {
+            self.view.userInteractionEnabled = YES;
+        }];
+    })
+    
+    __block YBProgressView *targetView = self.progressView;
+    kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            targetView.isCircleStop = YES;
+        });
+    })
+    
 }
 
 
@@ -85,6 +120,10 @@
     _dynamicView.clipsToBounds = YES;
 }
 
+
+/**
+ *  调节控制音量条
+ */
 -(void)refreshUIWithVoicePower: (NSInteger)voicePower{
     CGFloat height = (voicePower)*(CGRectGetHeight(_dynamicView.frame)/TOTAL_NUM);
     [_indicateLayer removeFromSuperlayer];
@@ -113,6 +152,9 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    /**
+     *  音量条的控制
+     */
     if (isHave) {
         [self refreshUIWithVoicePower:0];
         isHave = NO;
@@ -121,6 +163,22 @@
         [self refreshUIWithVoicePower:6];
         isHave = YES;
     }
+    
+    
+    /**
+     *  有动画的进度条
+     */
+    self.view.userInteractionEnabled = NO;
+    [self.progressView startCircleAnimation:^(BOOL isFinish) {
+        LRLog(@"整个动画结束了。。。");
+        self.view.userInteractionEnabled = YES;
+    }];
+    __block YBProgressView *targetView = self.progressView;
+    dispatch_time_t time_after = dispatch_time(DISPATCH_TIME_NOW, 2.0*NSEC_PER_SEC);
+    dispatch_after(time_after, dispatch_get_main_queue(), ^{
+        targetView.isCircleStop = YES;
+        NSLog(@"耗时工作结束了！！！兄弟！！！");
+    });
 }
 
 @end
