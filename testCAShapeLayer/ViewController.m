@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CAShapeLayer+mask.h"
 #import "YBProgressView.h"
-
+#import "YBWaveProgressView.h"
 
 #define TOTAL_NUM 10
 
@@ -20,6 +20,7 @@
 @property (nonatomic, weak) UIView *dynamicView;
 @property (nonatomic, strong) CAShapeLayer *indicateLayer;
 @property (nonatomic, strong) UIView *demoView;
+@property (nonatomic,strong) YBWaveProgressView *bigCicleView;
 
 /** 有动画效果的进度条*/
 @property (nonatomic, strong) YBProgressView *progressView;
@@ -42,6 +43,20 @@
     
     //测试画有动画的进度条
     [self addAnimationProgress];
+    
+    //测试波浪进度条动画
+    [self addWaveProgressView];
+}
+
+
+
+- (void)addWaveProgressView
+{
+    self.bigCicleView = [[YBWaveProgressView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2, 200, 120, 120)];
+    self.bigCicleView.backgroundColor = [UIColor colorWithRed:0/255.0 green:152/255.0 blue:246/255.0 alpha:1];;
+    [self.view addSubview:self.bigCicleView];
+    
+    [self.bigCicleView startAnimation];
 }
 
 

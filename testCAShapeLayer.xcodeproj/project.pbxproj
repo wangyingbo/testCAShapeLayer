@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681C82E91D3CF043007DCF8A /* YBWaveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C82E81D3CF043007DCF8A /* YBWaveProgressView.m */; };
 		6827A0B21D33789600D8BFCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827A0B11D33789600D8BFCC /* main.m */; };
 		6827A0B51D33789600D8BFCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827A0B41D33789600D8BFCC /* AppDelegate.m */; };
 		6827A0B81D33789600D8BFCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827A0B71D33789600D8BFCC /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		681C82E71D3CF043007DCF8A /* YBWaveProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBWaveProgressView.h; sourceTree = "<group>"; };
+		681C82E81D3CF043007DCF8A /* YBWaveProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBWaveProgressView.m; sourceTree = "<group>"; };
 		6827A0AD1D33789600D8BFCC /* testCAShapeLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testCAShapeLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6827A0B11D33789600D8BFCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6827A0B31D33789600D8BFCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				6827A0B71D33789600D8BFCC /* ViewController.m */,
 				68299DF61D361D6F003F7AA3 /* YBProgressView.h */,
 				68299DF71D361D6F003F7AA3 /* YBProgressView.m */,
+				681C82E71D3CF043007DCF8A /* YBWaveProgressView.h */,
+				681C82E81D3CF043007DCF8A /* YBWaveProgressView.m */,
 				6827A0E91D33792A00D8BFCC /* CAShapeLayer+mask.h */,
 				6827A0EA1D33792A00D8BFCC /* CAShapeLayer+mask.m */,
 				6827A0B91D33789600D8BFCC /* Main.storyboard */,
@@ -283,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6827A0B81D33789600D8BFCC /* ViewController.m in Sources */,
+				681C82E91D3CF043007DCF8A /* YBWaveProgressView.m in Sources */,
 				6827A0B51D33789600D8BFCC /* AppDelegate.m in Sources */,
 				68299DF81D361D6F003F7AA3 /* YBProgressView.m in Sources */,
 				6827A0B21D33789600D8BFCC /* main.m in Sources */,
